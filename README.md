@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Kei, Software Developer" width="100%"/>
+  <img src="assets/banner.png" alt="Kei, Software Developer" width="100%"/>
 </p>
 
 <p align="center">
-  <a href="mailto:your@email.com"><img src="https://img.shields.io/badge/Email-2f81f7?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://www.linkedin.com/in/your-handle"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://github.com/Ke-i30"><img src="https://img.shields.io/badge/GitHub-30363d?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-  <a href="https://your-portfolio.com"><img src="https://img.shields.io/badge/Portfolio-39d353?style=for-the-badge&logo=vercel&logoColor=black" alt="Portfolio"/></a>
+  <a href="mailto:your@email.com"><img src="https://img.shields.io/badge/Email-0b5bff?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://www.linkedin.com/in/your-handle"><img src="https://img.shields.io/badge/LinkedIn-0a2fa0?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://github.com/Ke-i30"><img src="https://img.shields.io/badge/GitHub-0014a8?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+  <a href="https://your-portfolio.com"><img src="https://img.shields.io/badge/Portfolio-19d3f3?style=for-the-badge&logo=vercel&logoColor=black" alt="Portfolio"/></a>
 </p>
 
 ## Tech Stack
@@ -29,4 +29,8 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ke-i30/Ke-i30/main/profile-3d-contrib/light.svg"/>
     <img alt="3D contribution graph" src="https://raw.githubusercontent.com/Ke-i30/Ke-i30/main/profile-3d-contrib/dark.svg" width="100%"/>
   </picture>
+</p>
+
+<p align="center">
+  <img src="assets/footer.svg" alt="" width="100%"/>
 </p>
