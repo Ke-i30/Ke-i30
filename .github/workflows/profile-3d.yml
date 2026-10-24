@@ -20,6 +20,9 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           SETTING_JSON: ./conf/github-profile-3d-contrib.json
 
+      - name: Remove radar chart and date range
+        run: python3 scripts/clean_3d_svg.py profile-3d-contrib/dark.svg profile-3d-contrib/light.svg
+
       - name: Commit and push
         run: |
           git config user.name github-actions
