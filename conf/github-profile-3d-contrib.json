@@ -4,16 +4,16 @@
     "fileName": "light.svg",
     "growingAnimation": true,
     "backgroundColor": "transparent",
-    "foregroundColor": "#0a1f6b",
-    "strongColor": "#0014a8",
-    "weakColor": "#5a6fa8",
-    "radarColor": "#0b5bff",
+    "foregroundColor": "#1a0a0a",
+    "strongColor": "#8a0000",
+    "weakColor": "#7a5a5a",
+    "radarColor": "#c00000",
     "contribColors": [
-      "#e6efff",
-      "#a8d4ff",
-      "#5aa0ff",
-      "#1d5ff0",
-      "#0a2fa0"
+      "#f3e4e4",
+      "#f0a8a8",
+      "#e55a5a",
+      "#c00000",
+      "#6e0000"
     ]
   },
   {
@@ -21,16 +21,16 @@
     "fileName": "dark.svg",
     "growingAnimation": true,
     "backgroundColor": "transparent",
-    "foregroundColor": "#d6e6ff",
+    "foregroundColor": "#f2f2f2",
     "strongColor": "#ffffff",
-    "weakColor": "#7f9bd6",
-    "radarColor": "#19d3f3",
+    "weakColor": "#a89090",
+    "radarColor": "#e00404",
     "contribColors": [
-      "#0a1236",
-      "#0b2a8a",
-      "#0b5bff",
-      "#19a8f3",
-      "#7df0ff"
+      "#1c0a0a",
+      "#5a0a0a",
+      "#a30a0a",
+      "#e00404",
+      "#ff6a5c"
     ]
   }
 ]
