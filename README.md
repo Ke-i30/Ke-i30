@@ -30,9 +30,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ke-i30/Ke-i30/output/github-snake-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ke-i30/Ke-i30/output/github-snake.svg"/>
-    <img alt="Contribution graph" src="https://raw.githubusercontent.com/Ke-i30/Ke-i30/output/github-snake.svg"/>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ke-i30/Ke-i30/main/profile-3d-contrib/dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ke-i30/Ke-i30/main/profile-3d-contrib/light.svg"/>
+    <img alt="3D contribution graph" src="https://raw.githubusercontent.com/Ke-i30/Ke-i30/main/profile-3d-contrib/dark.svg" width="100%"/>
   </picture>
 </p>
 
