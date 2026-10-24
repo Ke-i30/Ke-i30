@@ -29,11 +29,7 @@
 ## Contributions
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ke-i30/Ke-i30/output/github-snake-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ke-i30/Ke-i30/output/github-snake.svg"/>
-    <img alt="Contribution graph" src="https://raw.githubusercontent.com/Ke-i30/Ke-i30/output/github-snake.svg"/>
-  </picture>
+  <img src="https://raw.githubusercontent.com/Ke-i30/Ke-i30/main/profile-3d-contrib/profile-season-animate.svg" alt="3D contribution graph" width="100%"/>
 </p>
 
 ## Projects
