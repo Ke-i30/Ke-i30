@@ -1,18 +1,13 @@
-<h1 align="center">Kei</h1>
-
 <p align="center">
-  [Role, e.g. Full-stack developer]
+  <img src="assets/banner.svg" alt="Kei, Software Developer" width="100%"/>
 </p>
 
 <p align="center">
-  <a href="mailto:your@email.com"><img src="https://img.shields.io/badge/Email-111827?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://www.linkedin.com/in/your-handle"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://your-portfolio.com"><img src="https://img.shields.io/badge/Portfolio-111827?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio"/></a>
+  <a href="mailto:your@email.com"><img src="https://img.shields.io/badge/Email-2f81f7?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://www.linkedin.com/in/your-handle"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://github.com/Ke-i30"><img src="https://img.shields.io/badge/GitHub-30363d?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+  <a href="https://your-portfolio.com"><img src="https://img.shields.io/badge/Portfolio-39d353?style=for-the-badge&logo=vercel&logoColor=black" alt="Portfolio"/></a>
 </p>
-
-<!-- Tambahkan banner sendiri bila perlu:
-<p align="center"><img src="assets/banner.png" alt="Banner"/></p>
--->
 
 ## Tech Stack
 
@@ -35,11 +30,3 @@
     <img alt="3D contribution graph" src="https://raw.githubusercontent.com/Ke-i30/Ke-i30/main/profile-3d-contrib/dark.svg" width="100%"/>
   </picture>
 </p>
-
-## Projects
-
-| Project | Description | Stack |
-| --- | --- | --- |
-| [Project One](https://github.com/Ke-i30/project-one) | [Short description] | [Stack] |
-| [Project Two](https://github.com/Ke-i30/project-two) | [Short description] | [Stack] |
-| [Project Three](https://github.com/Ke-i30/project-three) | [Short description] | [Stack] |
