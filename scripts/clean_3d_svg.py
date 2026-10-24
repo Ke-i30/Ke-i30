@@ -1,15 +1,8 @@
-"""Post-process generated 3D contribution SVGs.
-
-- removes the radar chart and the date range
-- replaces the language donut with a fixed, hand-defined language mix
-  (same position, size and style as the original donut)
-"""
 import math
 import re
 import sys
 
 # label, color, share. The donut keeps this order, clockwise from the top.
-# These values are chosen by hand, they are not measured from GitHub.
 LANGUAGES = [
     ("TypeScript", "#3178c6", 30),
     ("JavaScript", "#f1e05a", 22),
@@ -29,6 +22,22 @@ TOLERANCE = 2.0
 DATE_TEXT = re.compile(
     r'<text[^>]*class="fill-weak"[^>]*>\s*\d{4}-\d{2}-\d{2} / \d{4}-\d{2}-\d{2}\s*</text>'
 )
+
+# Regex yang lebih spesifik untuk HANYA menghapus elemen star dan fork 
+# (berdasarkan path ikon atau teks angka di dekatnya) tanpa menyentuh "contributions"
+STAR_FORK_ELEMENTS = re.compile(
+    r'(?:<path[^>]*d="[^"]*(?:M8\s+2|M12|M14)[^"]*"[^>]*>.*?</path>|<text[^>]*>\s*\d+\s*</text>)'
+)
+
+# Alternatif: Jika star/fork berada dalam grup terpisah di sebelah kanan, 
+# kita bisa menargetkan elemen <g> yang posisinya berada di koordinat X sebelah kanan (misal x > 600)
+# atau langsung menghapus elemen path bintang dan fork secara spesifik.
+# Sebagai solusi yang aman, kita targetkan tag path/grup yang spesifik memuat ikon star/fork:
+SPECIFIC_STARS = re.compile(
+    r'<g\b[^>]*>.*?(?:<path[^>]*d="[^"]*M8\s+2[^"]*"[^>]*>).*?</g>',
+    re.DOTALL | re.IGNORECASE
+)
+
 GROUP_OPEN = re.compile(
     r'<g\b[^>]*\btransform="translate\(\s*([\d.]+)\s*,\s*([\d.]+)\s*\)"[^>]*>'
 )
@@ -113,16 +122,23 @@ def main(paths: list[str]) -> None:
     for path in paths:
         with open(path, encoding="utf-8") as f:
             svg = f.read()
+        
         svg, _, radar_removed = remove_group(svg, RADAR_POS)
         svg, date_count = DATE_TEXT.subn("", svg)
+        
+        # Hapus hanya bagian star dan fork secara spesifik
+        svg, stars_count = SPECIFIC_STARS.subn("", svg)
+        
         svg, index, pie_found = remove_group(svg, PIE_POS)
         if pie_found:
             svg = svg[:index] + donut_group() + svg[index:]
+            
         with open(path, "w", encoding="utf-8") as f:
             f.write(svg)
+            
         print(
             f"{path}: radar removed={radar_removed}, date removed={date_count}, "
-            f"languages replaced={pie_found}"
+            f"stars/forks removed={stars_count}, languages replaced={pie_found}"
         )
 
 
