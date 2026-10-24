@@ -1,9 +1,12 @@
 <p align="center">
-  <img src="assets/banner.jpg" alt="Kei, Software Developer" width="100%"/>
+  <img src="assets/banner.gif" alt="Kei, Software Developer" width="100%"/>
 </p>
 
 <p align="center">
-  <a href="mailto:fvan9318@gmail.com"><img src="https://img.shields.io/badge/Email-0b5bff?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="mailto:your@email.com"><img src="https://img.shields.io/badge/Email-dc0404?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://www.linkedin.com/in/your-handle"><img src="https://img.shields.io/badge/LinkedIn-8a0000?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://github.com/Ke-i30"><img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+  <a href="https://your-portfolio.com"><img src="https://img.shields.io/badge/Portfolio-f2f2f2?style=for-the-badge&logo=vercel&logoColor=black" alt="Portfolio"/></a>
 </p>
 
 ## Tech Stack
