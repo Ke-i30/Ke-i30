@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="160" viewBox="0 0 1600 160" preserveAspectRatio="none" role="img" aria-label="Footer">
   <defs>
     <linearGradient id="w1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#19d3f3" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#0b5bff" stop-opacity="0.9"/>
+      <stop offset="0" stop-color="#ff3b30" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#b00000" stop-opacity="0.9"/>
     </linearGradient>
     <linearGradient id="w2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0b5bff"/>
-      <stop offset="1" stop-color="#0014a8"/>
+      <stop offset="0" stop-color="#8a0000"/>
+      <stop offset="1" stop-color="#0a0000"/>
     </linearGradient>
   </defs>
   <path fill="url(#w1)" d="M0 70 C200 20 400 20 600 60 C800 100 1000 100 1200 55 C1350 25 1480 30 1600 55 L1600 160 L0 160 Z">
