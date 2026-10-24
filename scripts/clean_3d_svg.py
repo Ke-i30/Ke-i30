@@ -1,9 +1,3 @@
-"""Post-process generated 3D contribution SVGs.
-
-- removes the radar chart and the date range
-- replaces the language donut with a fixed, hand-defined language mix
-  (same position, size and style as the original donut)
-"""
 import math
 import re
 import sys
@@ -29,6 +23,19 @@ TOLERANCE = 2.0
 DATE_TEXT = re.compile(
     r'<text[^>]*class="fill-weak"[^>]*>\s*\d{4}-\d{2}-\d{2} / \d{4}-\d{2}-\d{2}\s*</text>'
 )
+
+# Pola regex untuk mendeteksi bagian star dan ikon di sampingnya (fork/statistik tambahan)
+# Menargetkan grup atau elemen path/text yang berhubungan dengan star dan fork di bagian bawah
+STARS_GROUP = re.compile(
+    r'<g\b[^>]*\btransform="translate\(\s*[\d.]+\s*,\s*[\d.]+\s*\)"[^>]*>.*?(?:star|fork).*?</g>',
+    re.DOTALL | re.IGNORECASE
+)
+
+# Alternatif: Jika star digambar menggunakan path SVG khusus tanpa tag <g> khusus, 
+# kita juga bisa menargetkan path/ikon star & fork berdasarkan koordinat atau elemen teks di dekatnya.
+# Contoh regex generik untuk teks/ikon star & fork di footer:
+STAT_ICONS = re.compile(r'<path[^>]*d="[^"]*(?:M8\s+2|M12|M14)[^"]*"/>', re.IGNORECASE)
+
 GROUP_OPEN = re.compile(
     r'<g\b[^>]*\btransform="translate\(\s*([\d.]+)\s*,\s*([\d.]+)\s*\)"[^>]*>'
 )
@@ -113,16 +120,23 @@ def main(paths: list[str]) -> None:
     for path in paths:
         with open(path, encoding="utf-8") as f:
             svg = f.read()
+        
         svg, _, radar_removed = remove_group(svg, RADAR_POS)
         svg, date_count = DATE_TEXT.subn("", svg)
+        
+        # Menghapus bagian star dan elemen di sampingnya menggunakan regex
+        svg, stars_count = STARS_GROUP.subn("", svg)
+        
         svg, index, pie_found = remove_group(svg, PIE_POS)
         if pie_found:
             svg = svg[:index] + donut_group() + svg[index:]
+            
         with open(path, "w", encoding="utf-8") as f:
             f.write(svg)
+            
         print(
             f"{path}: radar removed={radar_removed}, date removed={date_count}, "
-            f"languages replaced={pie_found}"
+            f"stars/forks removed={stars_count}, languages replaced={pie_found}"
         )
 
 
